@@ -1,6 +1,6 @@
-const { test, describe, expect } = require('@playwright/test')
+import { test, expect } from '@playwright/test'
 
-describe('Pokedex', () => {
+test.describe('Pokedex', () => {
   test('front page can be opened', async ({ page }) => {
     await page.goto('http://localhost:8080')
     await expect(page.getByText('ivysaur')).toBeVisible()
@@ -8,7 +8,7 @@ describe('Pokedex', () => {
   })
 })
 
-describe('Pokedex', () => {
+test.describe('Pokedex', () => {
   test('pokemon page can be navigated to', async ({ page }) => {
     await page.goto('http://localhost:8080/pokemon/parasect')
     await expect(page.getByText('parasect')).toBeVisible()
