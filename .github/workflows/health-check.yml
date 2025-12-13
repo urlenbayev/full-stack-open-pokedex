@@ -1,9 +1,6 @@
 name: Periodic Health Check
 
 on:
-  push:
-    branches:
-      - main
   schedule:
     # Run at 02:00 AM Helsinki time
     - cron: '0 0 * * *'
